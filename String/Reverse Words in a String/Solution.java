@@ -1,3 +1,4 @@
+// leetcode
 class Solution {
     public String reverseWords(String s) {
         StringBuilder ans = new StringBuilder("");
@@ -21,5 +22,19 @@ class Solution {
         }
         return ans.toString();
         
+    }
+}
+
+// gfg
+
+class Solution 
+{
+    //Function to reverse words in a given string.
+    String reverseWords(String S)
+    {
+        // code here 
+        String []words = S.split("[.]");
+        Collections.reverse(Arrays.asList(words));
+        return String.join(".",words);
     }
 }
