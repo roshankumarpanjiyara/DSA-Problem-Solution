@@ -21,3 +21,22 @@ class Solution {
         return prev;
     }
 }
+
+
+//recursion
+class Solution
+{
+    //Function to reverse a linked list.
+    Node reverseList(Node head)
+    {
+        // code here
+        if(head == null || head.next == null){
+            return head;
+        }
+        Node newhead = reverseList(head.next);
+        Node headnext = head.next;
+        headnext.next = head;
+        head.next = null;
+        return newhead;
+    }
+}
