@@ -8,6 +8,8 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
+//approach 1
 class Solution {
 public:
     ListNode* reverseLL(ListNode* head){
@@ -48,3 +50,44 @@ public:
         return carry == 0 ? ans->next : ans;
     }
 };
+
+//approach 2 using stack
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        stack<ListNode*> st1;
+        stack<ListNode*> st2;
+
+        while(l1 != NULL){
+            st1.push(l1);
+            l1 = l1->next;
+        }
+
+        while(l2 != NULL){
+            st2.push(l2);
+            l2 = l2->next;
+        }
+
+        ListNode* ans = new ListNode();
+
+        int carry = 0;
+        int sum = 0;
+        while(!st1.empty() || !st2.empty()){
+            if(!st1.empty()){
+                sum += st1.top()->val;
+                st1.pop();
+            }
+            if(!st2.empty()){
+                sum += st2.top()->val;
+                st2.pop();
+            }
+
+            ans->val = sum%10;
+            carry = sum/10;
+
+            ListNode* node = new ListNode(carry);
+            node->next = ans;
+            ans = node;
+            sum = carry;
+        }
+
+        return carry == 0 ? ans->next : ans;
+    }
