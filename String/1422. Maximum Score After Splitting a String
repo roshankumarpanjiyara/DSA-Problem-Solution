@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int maxScore(string s) {
+        int c1 = 0;
+        int c0 = 0;
+
+        for(int i = 0;i<s.length();i++){
+            if(s[i] == '1'){
+                c1++;
+            }
+        }
+
+        int maxSum = INT_MIN;
+        for(int i = 0;i<s.length()-1;i++){
+            if(s[i] == '0'){
+                c0++;
+            }else{
+                c1--;
+            }
+            maxSum = max(maxSum, c1+c0);
+        }
+
+        return maxSum;
+    }
+};
