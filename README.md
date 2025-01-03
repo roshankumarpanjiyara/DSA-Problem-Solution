@@ -1,6 +1,5 @@
 # Repository Name - DSA-Problem-Solution
 
-<img src="" align="right" /> 
 🦸🏻‍♂️To make a repository for All Problems and Solution of Leetcode, GFG, Code Studio. :checkered_flag: One stop Solution.  
 <ul>
  <li>This repo contains solutions to questions asked in various coding interviews topic wise.</li>
@@ -31,11 +30,3 @@
   <li><a href="https://github.com/roshankumarpanjiyara/DSA-Problem-Solution/tree/main/Stack">Stack</a></li>
   <li><a href="https://github.com/roshankumarpanjiyara/DSA-Problem-Solution/tree/main/String">String</a></li>
 </ul>
-
-
-
-# Contributors
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
- [<img src="https://avatars0.githubusercontent.com/u/17107752?s=400&v=4" width="100px;"/>](https://github.com/roshankumarpanjiyara)
-<!-- ALL-CONTRIBUTORS-LIST:END -->
